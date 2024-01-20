@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc && esbuild server.js --bundle --platform=node --minify --outfile=server-out.js",
+    "build": "esbuild src/server.ts --bundle --platform=node --minify --outfile=dist/out.js",
+    "build:macos": "./build.macos.sh",
     "dev": "nodemon server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,6 +16,7 @@
     "express": "^4.18.2"
   },
   "devDependencies": {
+    "@tsconfig/node21": "^21.0.1",
     "@types/express": "^4.17.17",
     "@types/node": "^18.15.7",
     "nodemon": "^2.0.22",
