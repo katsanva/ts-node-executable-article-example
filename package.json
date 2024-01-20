@@ -1,11 +1,13 @@
 {
   "name": "ts-node-server",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "esbuild src/server.ts --bundle --platform=node --minify --outfile=dist/out.js",
     "build:macos": "./build.macos.sh",
+    "build:ubuntu": "./build.linux.sh",
+    "build:windows": "build.windows.bat",
     "dev": "nodemon server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
